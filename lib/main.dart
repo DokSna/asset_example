@@ -16,7 +16,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Adding Assets'),
         ),
-        body: null,
+        body: Center(
+          child: Stack(
+            fit: StackFit.expand,
+            children: <Widget>[
+              Image(
+                image: AssetImage('assets/images/bg.jpg'),
+              ),
+              Image.asset('assets/icons/icon.png'),
+            ],
+          ),
+        ),
       ),
     );
   }
